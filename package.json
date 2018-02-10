@@ -1,0 +1,21 @@
+{
+ "name": "react-native-alarm-clock",
+ "version": "1.0.0",
+ "description": "",
+ "main": "index.js",
+ "scripts": {
+   "test": "echo \"Error: no test specified\" && exit 1"
+ },
+ "keywords": [
+   "react-native"
+ ],
+ "author": "equinoxstudiosteam@gmail.com",
+ "license": "Mozilla Public License",
+ "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kmorales13/react-native-alarm-clock.git"
+  },
+ "peerDependencies": {
+   "react-native": "^0.47.0"
+ }
+}
