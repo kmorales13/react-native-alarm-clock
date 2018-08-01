@@ -23,7 +23,7 @@ or
   	include ':react-native-alarm-clock'
   	project(':react-native-alarm-clock').projectDir = new File(rootProject.projectDir, 	'../node_modules/react-native-alarm-clock/android')
   	```
-3. Insert the following lines inside the dependencies block in `android/app/build.gradle`:
+3. Append the following line inside the dependencies block in `android/app/build.gradle`:
   	```
       compile project(':react-native-alarm-clock')
   	```
