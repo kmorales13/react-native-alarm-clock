@@ -9,7 +9,7 @@ or
 
 ### Automatic installation
 
-`$ react-native link react-native-alarm`
+`$ react-native link react-native-alarm-clock`
 
 ### Manual installation
 
