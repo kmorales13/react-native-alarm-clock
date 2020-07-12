@@ -34,6 +34,6 @@ or
 import RNAlarmClock from 'react-native-alarm-clock';
 
 // Creates an alarm with the TAG iDream at 17:30 hrs.
-RNAlarm.createAlarm('iDream', 17, 30);
+RNAlarmClock.createAlarm('iDream', 17, 30);
 ```
   
