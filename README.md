@@ -15,7 +15,7 @@ import AlarmClock from "react-native-alarm-clock";
 
 // ...
 
-AlarmClock.createAlarm('My Custom Alarm', 13, 55);
+AlarmClock.createAlarm('My Custom Alarm', 13, 55); // Create an alarm at 1:55PM with the label 'My Custom Alarm'
 ```
 
 ## Contributing
