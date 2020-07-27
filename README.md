@@ -15,7 +15,7 @@ import AlarmClock from "react-native-alarm-clock";
 
 // ...
 
-const result = await AlarmClock.multiply(3, 7);
+AlarmClock.createAlarm('My Custom Alarm', 13, 55);
 ```
 
 ## Contributing
