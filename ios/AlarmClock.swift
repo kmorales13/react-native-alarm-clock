@@ -38,8 +38,6 @@ class AlarmClock: NSObject {
 
     @objc func createAlarm(_ isoDate: String, name: String?) -> Void {
         if let date = DateFormatter.date(fromISO8601String: isoDate) {
-            print(date)
-                
             let eventStore = EKEventStore();
             eventStore.requestAccess(to: EKEntityType.reminder, completion: {
                 granted, error in
@@ -55,7 +53,7 @@ class AlarmClock: NSObject {
                     do {
                         try eventStore.save(reminder, commit: true)
                     } catch {
-                        print("Error creating reminder")
+                        print("Error creating reminder: \(error)")
                         return
                     }
                     
