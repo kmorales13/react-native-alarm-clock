@@ -1,7 +1,7 @@
 import { NativeModules } from 'react-native';
 
 type AlarmClockType = {
-  createAlarm(name: string, hour: number, minute: number): void;
+  createAlarm(isoDate: string, name: string): void;
 };
 
 const { AlarmClock } = NativeModules;

@@ -142,6 +142,7 @@
 				ORGANIZATIONNAME = Facebook;
 				TargetAttributes = {
 					13B07F861A680F5B00A75B9A = {
+						DevelopmentTeam = X94S88N3ZJ;
 						LastSwiftMigration = 1110;
 					};
 				};
@@ -269,6 +270,8 @@
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = NO;
+				DEVELOPMENT_TEAM = X94S88N3ZJ;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = AlarmClockExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_CFLAGS = (
@@ -284,7 +287,7 @@
 				PRODUCT_NAME = AlarmClockExample;
 				SWIFT_OBJC_BRIDGING_HEADER = "AlarmClockExample-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.2;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
@@ -296,6 +299,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = X94S88N3ZJ;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = AlarmClockExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_CFLAGS = (
@@ -310,7 +315,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.AlarmClockExample.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = AlarmClockExample;
 				SWIFT_OBJC_BRIDGING_HEADER = "AlarmClockExample-Bridging-Header.h";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.2;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;

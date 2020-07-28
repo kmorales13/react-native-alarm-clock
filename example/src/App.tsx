@@ -3,7 +3,11 @@ import { StyleSheet, View, Button } from 'react-native';
 import AlarmClock from 'react-native-alarm-clock';
 
 const create = () => {
-  AlarmClock.createAlarm('My Custom Alarm', 13, 55);
+  let date = new Date();
+  date.setDate(date.getDate() + 1);
+  date.setHours(13, 55);
+
+  AlarmClock.createAlarm(date.toISOString(), 'My Custom Alarm');
 };
 
 export default function App() {
