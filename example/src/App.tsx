@@ -1,14 +1,19 @@
 import * as React from 'react';
 
-import { StyleSheet, View, Text } from 'react-native';
-import { multiply } from 'react-native-alarm-clock';
-
-const result = multiply(3, 7);
+import { StyleSheet, View, Button } from 'react-native';
+import { createAlarm } from 'react-native-alarm-clock';
 
 export default function App() {
+  function createNewAlarm() {
+    let date = new Date();
+    date.setDate(date.getDate() + 1);
+    date.setHours(13, 55);
+    createAlarm(date.toISOString(), 'Custom Alarm');
+  }
+
   return (
     <View style={styles.container}>
-      <Text>Result: {result}</Text>
+      <Button title="Create Alarm at 1:55PM" onPress={createNewAlarm} />
     </View>
   );
 }

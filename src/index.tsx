@@ -1,5 +1,5 @@
 const AlarmClock = require('./NativeAlarmClock').default;
 
-export function multiply(a: number, b: number): number {
-  return AlarmClock.multiply(a, b);
+export function createAlarm(isoDate: string, name: string): void {
+  AlarmClock.createAlarm(isoDate, name);
 }

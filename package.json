@@ -1,6 +1,6 @@
 {
   "name": "react-native-alarm-clock",
-  "version": "0.1.0",
+  "version": "3.0.0",
   "description": "React Native Alarm",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
@@ -41,7 +41,9 @@
   "keywords": [
     "react-native",
     "ios",
-    "android"
+    "android",
+    "alarm",
+    "clock"
   ],
   "repository": "https://github.com/kmorales13/react-native-alarm-clock",
   "author": "kmorales13 <equinoxstudiosteam@gmail.com> (https://github.com/kmorales13)",
