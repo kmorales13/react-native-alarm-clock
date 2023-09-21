@@ -1,7 +1,7 @@
 {
   "name": "react-native-alarm-clock",
-  "version": "3.0.0",
-  "description": "React Native Alarm",
+  "version": "2.0.2",
+  "description": "React Native Alarm Clock",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
   "types": "lib/typescript/src/index.d.ts",
@@ -13,37 +13,27 @@
     "android",
     "ios",
     "cpp",
-    "*.podspec",
+    "react-native-alarm-clock.podspec",
     "!lib/typescript/example",
-    "!ios/build",
-    "!android/build",
-    "!android/gradle",
-    "!android/gradlew",
-    "!android/gradlew.bat",
-    "!android/local.properties",
     "!**/__tests__",
     "!**/__fixtures__",
-    "!**/__mocks__",
-    "!**/.*"
+    "!**/__mocks__"
   ],
   "scripts": {
+    "clean": "cd android && gradlew clean && cd ..",
     "test": "jest",
-    "typecheck": "tsc --noEmit",
+    "typescript": "tsc --noEmit",
     "lint": "eslint \"**/*.{js,ts,tsx}\"",
-    "prepack": "bob build",
+    "prepare": "bob build",
     "release": "release-it",
     "example": "yarn --cwd example",
-    "build:android": "cd example/android && ./gradlew assembleDebug --no-daemon --console=plain -PreactNativeArchitectures=arm64-v8a",
-    "build:ios": "cd example/ios && xcodebuild -workspace AlarmClockExample.xcworkspace -scheme AlarmClockExample -configuration Debug -sdk iphonesimulator CC=clang CPLUSPLUS=clang++ LD=clang LDPLUSPLUS=clang++ GCC_OPTIMIZATION_LEVEL=0 GCC_PRECOMPILE_PREFIX_HEADER=YES ASSETCATALOG_COMPILER_OPTIMIZATION=time DEBUG_INFORMATION_FORMAT=dwarf COMPILER_INDEX_STORE_ENABLE=NO",
-    "bootstrap": "yarn example && yarn install && yarn example pods",
-    "clean": "del-cli android/build example/android/build example/android/app/build example/ios/build"
+    "pods": "cd example && pod-install --quiet",
+    "bootstrap": "yarn example && yarn && yarn pods"
   },
   "keywords": [
     "react-native",
     "ios",
-    "android",
-    "alarm",
-    "clock"
+    "android"
   ],
   "repository": "https://github.com/kmorales13/react-native-alarm-clock",
   "author": "kmorales13 <equinoxstudiosteam@gmail.com> (https://github.com/kmorales13)",
@@ -52,43 +42,31 @@
     "url": "https://github.com/kmorales13/react-native-alarm-clock/issues"
   },
   "homepage": "https://github.com/kmorales13/react-native-alarm-clock#readme",
-  "publishConfig": {
-    "registry": "https://registry.npmjs.org/"
-  },
   "devDependencies": {
-    "@commitlint/config-conventional": "^17.0.2",
-    "@evilmartians/lefthook": "^1.2.2",
-    "@react-native/eslint-config": "^0.72.2",
-    "@release-it/conventional-changelog": "^5.0.0",
-    "@types/jest": "^28.1.2",
-    "@types/react": "~17.0.21",
-    "@types/react-native": "0.70.0",
-    "commitlint": "^17.0.2",
-    "del-cli": "^5.0.0",
-    "eslint": "^8.4.1",
-    "eslint-config-prettier": "^8.5.0",
-    "eslint-plugin-prettier": "^4.0.0",
-    "jest": "^28.1.1",
-    "pod-install": "^0.1.0",
-    "prettier": "^2.0.5",
-    "react": "18.2.0",
-    "react-native": "0.72.4",
-    "react-native-builder-bob": "^0.22.0",
-    "release-it": "^15.0.0",
-    "turbo": "^1.10.7",
-    "typescript": "^5.0.2"
-  },
-  "resolutions": {
-    "@types/react": "17.0.21"
+    "@commitlint/config-conventional": "^12.1.1",
+    "@react-native-community/bob": "^0.17.1",
+    "@react-native-community/eslint-config": "^2.0.0",
+    "@release-it/conventional-changelog": "^2.0.1",
+    "@types/jest": "^26.0.22",
+    "@types/react": "^17.0.3",
+    "@types/react-native": "0.64.4",
+    "commitlint": "^12.1.1",
+    "eslint": "^7.24.0",
+    "eslint-config-prettier": "^8.2.0",
+    "eslint-plugin-prettier": "^3.4.0",
+    "husky": "^6.0.0",
+    "jest": "^26.6.3",
+    "pod-install": "^0.1.21",
+    "prettier": "^2.2.1",
+    "react": "16.11.0",
+    "react-native": "0.62.2",
+    "release-it": "^14.6.1",
+    "typescript": "^4.2.4"
   },
   "peerDependencies": {
     "react": "*",
     "react-native": "*"
   },
-  "engines": {
-    "node": ">= 18.0.0"
-  },
-  "packageManager": "^yarn@1.22.15",
   "jest": {
     "preset": "react-native",
     "modulePathIgnorePatterns": [
@@ -119,9 +97,8 @@
     }
   },
   "eslintConfig": {
-    "root": true,
     "extends": [
-      "@react-native",
+      "@react-native-community",
       "prettier"
     ],
     "rules": {
@@ -148,23 +125,13 @@
     "trailingComma": "es5",
     "useTabs": false
   },
-  "react-native-builder-bob": {
+  "@react-native-community/bob": {
     "source": "src",
     "output": "lib",
     "targets": [
       "commonjs",
       "module",
-      [
-        "typescript",
-        {
-          "project": "tsconfig.build.json"
-        }
-      ]
+      "typescript"
     ]
-  },
-  "codegenConfig": {
-    "name": "RNAlarmClockSpec",
-    "type": "modules",
-    "jsSrcsDir": "src"
   }
 }

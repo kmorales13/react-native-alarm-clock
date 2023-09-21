@@ -10,12 +10,12 @@ npm install react-native-alarm-clock
 
 ## Usage
 
-Simply call `createAlarm` with an ISO8601 date string and a label.
+Simply call `createAlarm` with and ISO8601 date string and a label.
 Android does not support setting a specific day, it will get the hour & minute out of the passed date and use that.
 iOS does supports using a specific date.
 
 ```js
-import AlarmClock from 'react-native-alarm-clock';
+import AlarmClock from "react-native-alarm-clock";
 
 // ...
 

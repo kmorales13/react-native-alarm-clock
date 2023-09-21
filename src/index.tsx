@@ -1,5 +1,9 @@
-const AlarmClock = require('./NativeAlarmClock').default;
+import { NativeModules } from 'react-native';
 
-export function createAlarm(isoDate: string, name: string): void {
-  AlarmClock.createAlarm(isoDate, name);
-}
+type AlarmClockType = {
+  createAlarm(isoDate: string, name: string): void;
+};
+
+const { AlarmClock } = NativeModules;
+
+export default AlarmClock as AlarmClockType;
